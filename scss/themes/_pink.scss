@@ -1,0 +1,30 @@
+.logo {
+  a {
+    &::before {
+      border-top: 4px solid #ec1839;
+      border-left: 4px solid #ec1839;
+    }
+
+    &::after {
+      border-right: 4px solid #ec1839;
+      border-bottom: 4px solid #ec1839;
+    }
+  }
+}
+
+.nav {
+  &__link {
+    &.active,
+    &:hover {
+      color: #ec1839;
+    }
+  }
+}
+
+
+.nav-toggler span::before,
+.nav-toggler span::after,
+.nav-toggler span,
+.social-media__link {
+  background-color: #ec1839;
+}
