@@ -4,24 +4,33 @@
   border: 1px solid #d4d4e3;
   cursor: pointer;
   position: fixed;
-  left: 300px;
-  top: 30px;
-  z-index: 11;
+  top: 20px;
+  left: 30px;
+  z-index: 100;
   border-radius: 5px;
   background-color: #fdf9ff;
-  // display: -ms-flexbox;
-  // display: flex;
-  display: none;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
+  transition: .3s ease;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+
+  &--open {
+    left: 300px;
+  }
 
   span {
     height: 2px;
     width: 18px;
     display: inline-block;
     position: relative;
+    background-color: transparent;
 
     &::before {
       content: '';
